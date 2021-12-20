@@ -1,0 +1,84 @@
+﻿<Page
+    x:Class="Universal1App.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Universal1App"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:Extensions ="using:Microsoft.Toolkit.Uwp.UI.Extensions"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="DarkCyan">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <RelativePanel Grid.Column="0" Background="#FFF80159">
+            <Image Source="Assets/images/premier-league-logo-png-transparent.png"
+                   MaxHeight="200" Width="300"
+                   Margin="50"
+                   RelativePanel.AlignHorizontalCenterWithPanel="True"
+                   RelativePanel.AlignVerticalCenterWithPanel="True"/>
+        </RelativePanel>
+
+        <ScrollViewer Grid.Column="1" FontFamily="Century Gothic"
+                      Foreground="#FF3D195B">
+
+            <StackPanel>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    
+                    <TextBlock Grid.Row="0"
+                               FontSize="35"
+                               Text="LOGIN"
+                               Margin="50"
+                               FontWeight="Bold"/>
+
+                    <TextBlock Grid.Row="1"
+                               Text="Email :"
+                               FontSize="25"
+                               Margin="50,0,0,0"/>
+
+                    <TextBox Grid.Row="2"
+                             FontSize="25"
+                             Margin="50,0,50,20"
+                             PlaceholderForeground="#FF3D195B"
+                             BorderThickness="0,0,0,4"
+                             BorderBrush="#FF3D195B"/>
+
+                    <TextBlock Grid.Row="3"
+                               Text="Password :"
+                               FontSize="25"
+                               Margin="50,0,0,0"/>
+
+                    <PasswordBox Grid.Row="4"
+                                 FontSize="25"
+                                 Margin="50,0,50,20"
+                                 BorderThickness="0,0,0,4"
+                                 BorderBrush="#FF3D195B"/>
+
+                    <Button Grid.Row="5"
+                            Margin="50,0,0,0"
+                            Content="Login"
+                            FontSize="21"
+                            Foreground="White"
+                            Background="#FF3D195B"
+                            CornerRadius="5"
+                            Padding="15,5,15,5"
+                            Extensions:Mouse.Cursor="Hand"/>    
+                </Grid>
+            </StackPanel>
+            
+        </ScrollViewer>
+               
+    </Grid>
+</Page>
